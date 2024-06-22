@@ -97,9 +97,6 @@ const RankPairs = () => {
             </div>
           </button>
         </div>
-        <div className="RowBelow">
-          <p>Which will perform better the next 30 days</p>
-        </div>
       </div>
     </section>
   );
