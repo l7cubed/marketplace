@@ -3,8 +3,8 @@ import { Providers } from "@/components/shared/Providers";
 import { Navbar } from "@/components/shared/Navbar";
 
 export const metadata: Metadata = {
-  title: "Marketplace",
-  description: "",
+  title: "MyEVM ART",
+  description: "When your NFTs do Defi",
 };
 
 export default function RootLayout({

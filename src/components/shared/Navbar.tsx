@@ -37,17 +37,14 @@ export function Navbar() {
     <Box py="30px" px={{ base: "20px", lg: "50px" }}>
       <Flex direction="row" justifyContent="space-between">
         <Box my="auto">
-          <Heading
-            as={Link}
-            href="/"
-            _hover={{ textDecoration: "none" }}
-            bgGradient="linear(to-l, #7928CA, #FF0080)"
-            bgClip="text"
-            fontWeight="extrabold"
-          >
-            {/* Replace this with your own branding */}
-            THIRDMART
-          </Heading>
+          <Link href="/" _hover={{ textDecoration: "none" }}>
+            <Image
+              src="https://i.imgur.com/2CuABay.png" // Replace this with your actual logo URL
+              alt="MyEVM ART Logo"
+              height="80px" // Adjust the height as needed
+              objectFit="contain"
+            />
+          </Link>
         </Box>
         <Box display={{ lg: "block", base: "none" }}>
           <ToggleThemeButton />

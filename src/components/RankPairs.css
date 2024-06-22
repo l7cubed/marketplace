@@ -1,0 +1,187 @@
+/* Import necessary styles */
+@import 'https://unpkg.com/open-props' layer(design.system);
+@import 'https://unpkg.com/open-props/normalize.dark.min.css' layer(base.normalize);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..900&family=Pacifico&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  --surface-1: oklch(0 0 0);
+  --text-1: oklch(0.97 0 0);
+  --text-2: oklch(0.73 0 0);
+  --link-visited: oklch(0.73 0 0);
+}
+
+a {
+  color: var(--text-2);
+  display: flex;
+  gap: var(--size-1);
+}
+
+.rounded {
+  border-radius: var(--radius-2);
+}
+
+.padding {
+  padding-inline: var(--size-3);
+  padding-block: var(--size-3);
+}
+
+.margin {
+  margin-inline: var(--size-3);
+  margin-block: var(--size-3);
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  gap: var(--size-3);
+}
+
+.inline-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--size-3);
+}
+
+.block {
+  display: grid;
+  gap: var(--size-3);
+}
+
+.surface {
+  background: var(--surface-2);
+}
+
+.shadow {
+  box-shadow: var(--shadow-3);
+}
+
+.border {
+  border: var(--border-size-1) solid var(--surface-2);
+}
+
+.container {
+  max-inline-size: var(--content-2);
+}
+
+.scroll {
+  overflow: auto;
+}
+
+.snaps {
+  scroll-snap-type: both mandatory;
+}
+
+.snaps-x {
+  scroll-snap-type: x mandatory;
+}
+
+.snaps-y {
+  scroll-snap-type: y mandatory;
+}
+
+.snap {
+  scroll-snap-align: center;
+}
+
+.snap-stop {
+  scroll-snap-stop: always;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.visually-hidden, .sr-only {
+  inline-size: 0;
+  block-size: 0;
+  overflow: hidden;
+}
+
+.Section {
+  padding-block: var(--size-6);
+  gap: var(--size-8);
+  justify-items: center;
+  align-content: start;
+  grid-template-rows: auto 1fr;
+  min-block-size: 100dvh;
+}
+
+.RankContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--size-8);
+  max-width: 60%;
+  margin-bottom: 10px;
+}
+
+.Button {
+  border: var(--border-size-3) solid var(--gray-10);
+  border-radius: var(--radius-3);
+  position: relative;
+  aspect-ratio: 1;
+  padding: 0;
+  background: var(--gradient-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Button:hover {
+  outline: var(--border-size-2) solid var(--link);
+  transition: outline-offset 145ms var(--ease-2);
+}
+
+.Button:not(:active):hover {
+  outline-offset: 5px;
+}
+
+.Button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--gradient-8);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: var(--layer-3);
+  animation: fade-out 1s forwards;
+}
+
+.ImgContainer {
+  outline: var(--border-size-2) solid transparent;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-3);
+}
+
+.ImgContainer > * {
+  grid-area: 1/1;
+}
+
+.Wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  gap: var(--size-3);
+}
+
+.fade-out {
+  animation: fade-out 0.25s forwards;
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.RowBelow {
+  display: grid;
+  gap: var(--size-3);
+  grid-template-columns: 1fr;
+  max-width: 100%;
+}
